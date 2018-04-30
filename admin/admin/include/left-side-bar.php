@@ -25,7 +25,8 @@
                         <li class=""><a href="statistik-keseluruhan.php">Kesluruhan</a></li>
                     </ul>
                 </li>
-                <li class=""><a href="pengurusan-surah.php"><i class="lnr lnr-alarm"></i> <span>Pengurusan Surah</span> <span class="badge bg-danger">15</span></a></li>
+                <li class=""><a href="pengurusan-surah.php"><i class="lnr lnr-book"></i> <span>Pengurusan Surah</span></a></li>
+                <li class=""><a href="pengurusan-doa.php"><i class="lnr lnr-volume-high"></i> <span>Pengurusan Doa</span></a></li>
             </ul>
         </nav>
     </div>
