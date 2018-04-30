@@ -6,6 +6,15 @@
 
 <?php
 //check if surah exist
+if(isset($_POST['deleteTrack'])){
+    $sql = "UPDATE surah SET track = '' WHERE id = $_POST[sid]";
+    mysqli_query($db, $sql);
+    if(unlink('../../track/'.$_POST['sid'].'/full.mp3')){
+        echo '<script>alert("Track telah dipadam!");window.location="lihat-surah.php?surah='.$_POST['sid'].'&page=1"</script>';
+    }else{
+        echo '<script>alert("Gagal memadam track!");window.location="lihat-surah.php?surah='.$_POST['sid'].'&page=1"</script>';
+    }
+}
 if(isset($_GET['surah'])){
 
     if(empty($_GET['page'])){
@@ -74,8 +83,7 @@ if(isset($_GET['surah'])){
                     <div class="col-md-4">
                         <div class="panel-content">
                             <h2 class="heading"><i class="fa fa-bullhorn"></i> Audio Surah</h2>
-                            <form id="basic-form" method="post" novalidate>
-                                <div class="form-group">
+                                <div class="form-group text-center">
                                     <?php
 
                                     if ($data['track'] != null || $data['track'] != '') {
@@ -84,6 +92,7 @@ if(isset($_GET['surah'])){
                                             <source src='<?php echo '../../../'.$data['track']?>' type='audio/mp3'>
                                             Your browser does not support the audio tag.
                                         </audio>
+                                        <button type="button" class="btn btn-danger btn-hero" data-toggle="modal" data-target="#deleteTrack" data-whatever="@mdo">Padam Audio</button>
                                     <?php }else { ?>
 
                                         <div class="alert alert-warning">
@@ -93,7 +102,6 @@ if(isset($_GET['surah'])){
 
                                     <?php } ?>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -169,6 +177,32 @@ if(isset($_GET['surah'])){
                     </form>
                 </div>
             </div>
+
+            <div class="modal fade" id="deleteTrack"  role="dialog" >
+                <div class="modal-dialog" role="document">
+                    <form class="modal-content" method="post" action="lihat-surah.php?surah=<?php echo $_GET['surah'] ?>&page=<?php echo $_GET['page'] ?>">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row setup-content" id="step-1">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12 text-center">
+                                        <input type="hidden" name="sid" value="<?php echo $_GET['surah'] ?>">
+                                        <h4>Adakah anda pasti untuk memadam audio ini?</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" name="deleteTrack">Ya</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <!-- END SALES SUMMARY -->
 
         </div>
@@ -181,7 +215,6 @@ if(isset($_GET['surah'])){
 <!-- END WRAPPER -->
 
 <!-- Javascript -->
-
 </body>
 
 </html>
