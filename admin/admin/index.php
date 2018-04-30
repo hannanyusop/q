@@ -1,0 +1,1 @@
+<?php '<script>window.location="dashboard.php"</script>'; ?>
