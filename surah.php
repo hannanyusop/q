@@ -56,12 +56,20 @@
                 <div class="col-xl-4">
                     <!-- Subscribe -->
                     <div class="block block-rounded">
-                        <div class="block-content">
-                            <a class="btn btn-block btn-hero btn-noborder btn-rounded btn-success mb-10" href="javascript:void(0)">
+                        <div class="block-content text-center">
+                            <audio id="myAudio">
+                                <source src="<?php echo $data['track'] ?>" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <button class="btn btn-hero btn-noborder btn-success mb-10" onclick="playAudio()")>
                                 <i class="si si-control-play"></i>
-                                Main Surah
-                            </a>
-                            <p class="text-center">atau <a class="link-effect" href="javascript:void(0)">Muat turun Audio</a></p>
+                                Play
+                            </button>
+                            <button class="btn btn-hero btn-noborder btn-danger mb-10" onclick="pauseAudio()")>
+                                <i class="si si-control-pause"></i>
+                                Pause
+                            </button>
+                            <p class="text-center">atau <a class="link-effect" href="<?php echo $data['track'] ?>" download>Muat turun Audio</a></p>
                         </div>
                     </div>
                     <!-- END Subscribe -->
@@ -135,4 +143,15 @@
         </div>
         <!-- END Page Content -->
     </main>
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+    </script>
     <?php include('q-include/footer.php') ?>

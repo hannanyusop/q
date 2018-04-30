@@ -71,26 +71,32 @@ if(isset($_GET['surah'])){
             <!-- SALES SUMMARY -->
             <div class="dashboard-section">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="panel-content">
-                            <h2 class="heading"><i class="fa fa-search"></i> Carian</h2>
+                            <h2 class="heading"><i class="fa fa-bullhorn"></i> Audio Surah</h2>
                             <form id="basic-form" method="post" novalidate>
                                 <div class="form-group">
-                                    <label>Nama Surah</label>
-                                    <input type="text" class="form-control" required>
+                                    <?php
+
+                                    if ($data['track'] != null || $data['track'] != '') {
+                                        ?>
+                                        <audio controls>
+                                            <source src='<?php echo '../../../'.$data['track']?>' type='audio/mp3'>
+                                            Your browser does not support the audio tag.
+                                        </audio>
+                                    <?php }else { ?>
+
+                                        <div class="alert alert-warning">
+                                            Tiada Audio
+                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#uploadTrack" data-whatever="@mdo">Tambah Audio</button>
+                                        </div>
+
+                                    <?php } ?>
                                 </div>
-                                <div class="form-group">
-                                    <label>Tempat Turun</label>
-                                    <select class="form-control">
-                                        <option>MAKKAH</option>
-                                        <option>MADINAH</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Cari</button>
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                         <div class="panel-content">
                             <h3 class="heading"><i class="fa fa-list"></i> Senarai Surah</h3>
                             <div class="table-responsive">
@@ -99,8 +105,7 @@ if(isset($_GET['surah'])){
                                     <tr>
                                         <th>No. Ayat</th>
                                         <th>Ayat</th>
-                                        <th>Audio</th>
-                                        <th>Kemaskini</th>
+                                        <th></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -116,8 +121,7 @@ if(isset($_GET['surah'])){
                                                     <?php echo $row['malay'] ?>
                                                 </small>
                                             </td>
-                                            <td><button class="btn btn-xs btn-info"><i class="fa fa-play">Main</i> </button></td>
-                                            <td><a href="kemaskini-surah.php?surah=<?php echo $surah_id; ?>&ayat=<?php echo $row['id']; ?>"><i class="fa fa-edit">Kemaskini</i> </a></td>
+                                            <td><a href="kemaskini-surah.php?surah=<?php echo $surah_id; ?>&ayat=<?php echo $row['id']; ?>">Kemaskini</a></td>
                                         </tr>
                                     <?php } ?>
                                     </tbody>
@@ -136,6 +140,33 @@ if(isset($_GET['surah'])){
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="modal fade" id="uploadTrack"  role="dialog" >
+                <div class="modal-dialog" role="document">
+                    <form class="modal-content" enctype="multipart/form-data" method="post" action="upload-surah-audio.php">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Audio</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row setup-content" id="step-1">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12 well text-center">
+                                        <label for="fileToUpload">Sila pilih track (.mp3)</label><br />
+                                        <input type="file" name="track"/>
+                                        <input type="hidden" name="surah" value="<?php echo $_GET['surah']; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Kemaskini</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <!-- END SALES SUMMARY -->
