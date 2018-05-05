@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['usermame'])){
+    echo "<script>alert('Sila log masuk semula.');window.location='../login.php'</script>";
+}
 include_once('../config/database.php');
 include_once('../config/var.php');
 include_once('../config/function.php');

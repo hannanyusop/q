@@ -12,7 +12,7 @@
 					<div class="content">
 						<div class="header">
 							<div class="logo text-center"><img src="assets/img/logo.png" alt="DiffDash"></div>
-							<p class="lead">Login to your account</p>
+							<p class="lead">Log Masuk Akaun</p>
 						</div>
 						<form class="form-auth-small" action="verify.php" method="post">
 							<div class="form-group">

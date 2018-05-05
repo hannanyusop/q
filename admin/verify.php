@@ -9,7 +9,7 @@ include_once('config/database.php');
         $count_user = mysqli_num_rows($fetch_user);
 
         if ($count_user > 0) {
-
+            session_start();
             $row = mysqli_fetch_assoc($fetch_user);
             $_SESSION['usermame'] = $row['username'];
             $_SESSION['email'] = $row['email'];

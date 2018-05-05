@@ -1,15 +1,12 @@
 <header id="page-header">
     <div class="content-header">
-        <div class="content-header-section">
             <!-- Logo -->
             <div class="content-header-item">
                 <a class="link-effect font-w700 mr-5" href="../index.php">
-                    <i class="si si-fire text-primary"></i>
-                    <span class="font-size-xl text-dual-primary-dark">code</span><span class="font-size-xl text-primary">base</span>
+                    <i class="si si-book-open text-primary"></i>
+                    <span class="font-size-xl text-dual-primary-dark">Al-quran & </span><span class="font-size-xl text-primary">Hisnul Muslim</span>
                 </a>
             </div>
-        </div>
-
         <!-- END Right Section -->
     </div>
 
