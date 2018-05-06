@@ -11,7 +11,7 @@ include_once('config/database.php');
         if ($count_user > 0) {
             session_start();
             $row = mysqli_fetch_assoc($fetch_user);
-            $_SESSION['usermame'] = $row['username'];
+            $_SESSION['username'] = $row['username'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['id'] = $row['id'];
             $_SESSION['fullname'] = $row['fullname'];

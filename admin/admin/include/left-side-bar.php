@@ -7,10 +7,9 @@
         <div class="user-account">
             <img src="assets/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture">
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle user-name" data-toggle="dropdown">Hi, <strong>Austin Hoffman</strong> <i class="fa fa-caret-down"></i></a>
+                <a href="#" class="dropdown-toggle user-name" data-toggle="dropdown">Hi, <strong><?php echo $_SESSION['username'] ?></strong> <i class="fa fa-caret-down"></i></a>
                 <ul class="dropdown-menu dropdown-menu-right account">
                     <li><a href="profile.php">My Profile</a></li>
-                    <li><a href="setting.php">Settings</a></li>
                     <li class="divider"></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['usermame'])){
+if(!isset($_SESSION['username'])){
     echo "<script>alert('Sila log masuk semula.');window.location='../login.php'</script>";
 }
 include_once('../config/database.php');
