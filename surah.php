@@ -121,7 +121,7 @@
                                     </p>
                                     <?php if($text['track'] != ""): ?>
                                     <audio controls>
-                                        <source src='track/1/1.mp3' type='audio/mp3'>
+                                        <source src='track/<?php echo $text['surah_id']."/".$text['ayat_num'] ?>.mp3' type='audio/mp3'>
                                         Your browser does not support the audio tag.
                                     </audio>
                                     <?php else: echo '<small class="p-10 bg-primary-lighter text-primary-dark font-w500">tiada track bagi surah ini</small>'; endif;?>

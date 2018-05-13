@@ -68,20 +68,19 @@ if(isset($_GET['surah']) && isset($_GET['ayat'])){
                             <div class="form-group">
                                 <?php
 
-                                if ($data['track'] != null || $data['track'] != '') {
-                                    ?>
+//                                if ($data['track'] != null || $data['track'] != '') {
+//                                    ?>
                                     <audio controls>
                                         <source src='../../track/<?php echo "$data[surah_id]/$data[ayat_num].mp3"; ?>' type='audio/mp3'>
                                         Your browser does not support the audio tag.
                                     </audio>
-                                <?php }else { ?>
+<!--                                --><?php //}else { ?>
 
                                     <div class="alert alert-warning">
-                                        Tiada Audio
-                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#uploadTrack" data-whatever="@mdo">Tambah Audio</button>
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#uploadTrack" data-whatever="@mdo">Kemaskini</button>
                                     </div>
 
-                                <?php } ?>
+<!--                                --><?php //} ?>
                             </div>
                             <br>
                             <button type="submit" name="update" class="btn btn-primary">Kemaskini</button>
