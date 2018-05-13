@@ -19,7 +19,7 @@ var BeUIIcons = function() {
             if (searchValue.length > 2) { // If more than 2 characters, search the icons
                 searchItems.hide();
 
-                jQuery('code', searchItems)
+                jQuery('tr', searchItems)
                     .each(function(){
                         if (jQuery(this).text().match(searchValue)) {
                             jQuery(this).parent('div').fadeIn(300);

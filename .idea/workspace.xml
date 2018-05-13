@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ce04057-f148-4b1e-b2c7-bcd209958f9e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/mousetrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/utama-doa.php.ori" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/admin/kemaskini-surah.php" afterPath="$PROJECT_DIR$/admin/admin/kemaskini-surah.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/surah.php" afterPath="$PROJECT_DIR$/surah.php" />
+      <change beforePath="$PROJECT_DIR$/assets/js/pages/be_ui_icons.js" afterPath="$PROJECT_DIR$/assets/js/pages/be_ui_icons.js" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/datatables/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/assets/js/plugins/datatables/jquery.dataTables.min.js" />
+      <change beforePath="$PROJECT_DIR$/utama-doa.php" afterPath="$PROJECT_DIR$/utama-doa.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,51 +17,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="utama-doa.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utama-doa.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="surah.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/surah.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="123" column="85" lean-forward="false" selection-start-line="123" selection-start-column="77" selection-end-line="123" selection-end-column="85" />
+            <state relative-caret-position="397">
+              <caret line="56" column="62" lean-forward="false" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
               <folding>
-                <marker date="1526199322159" expanded="true" signature="408:437" ph="SELECT * FRO... surah" />
-                <marker date="1526199322159" expanded="true" signature="744:779" ph="SELECT * FRO... texts" />
-                <marker date="1526199322159" expanded="true" signature="5264:5348" ph="SELECT * FRO... texts" />
-                <marker date="1526199322159" expanded="true" signature="7172:7368" ph="..." />
-                <marker date="1526199322159" expanded="true" signature="7256:7289" ph="{...}" />
-                <marker date="1526199322159" expanded="true" signature="7321:7355" ph="{...}" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <marker date="1526202806030" expanded="true" signature="1261:1278" ph="SELECT * FRO... doa" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kemaskini-surah.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/admin/kemaskini-surah.php">
+      <file leaf-file-name="jquery.dataTables.min.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/plugins/datatables/jquery.dataTables.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="78" column="69" lean-forward="false" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
-              <folding>
-                <marker date="1526200050164" expanded="true" signature="333:445" ph="SELECT * FRO... texts" />
-                <marker date="1526200050164" expanded="true" signature="6371:6458" ph="UPDATE texts... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/core/jquery.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="1" column="2490" lean-forward="false" selection-start-line="1" selection-start-column="2484" selection-end-line="1" selection-end-column="2490" />
+            <state relative-caret-position="198">
+              <caret line="143" column="244" lean-forward="true" selection-start-line="143" selection-start-column="225" selection-end-line="143" selection-end-column="244" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -69,27 +43,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mousetrap.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/mousetrap.min.js">
+      <file leaf-file-name="dataTables.bootstrap4.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/plugins/datatables/dataTables.bootstrap4.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="10" column="264" lean-forward="false" selection-start-line="10" selection-start-column="264" selection-end-line="10" selection-end-column="264" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="6" column="198" lean-forward="false" selection-start-line="6" selection-start-column="197" selection-end-line="6" selection-end-column="198" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meta.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/q-include/meta.php">
+      <file leaf-file-name="be_ui_icons.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/pages/be_ui_icons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="76" lean-forward="false" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+            <state relative-caret-position="289">
+              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>show</find>
+      <find>First</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,9 +83,7 @@
         <option value="$PROJECT_DIR$/blank.php" />
         <option value="$PROJECT_DIR$/q-include/config/database.php" />
         <option value="$PROJECT_DIR$/utam-doa.php" />
-        <option value="$PROJECT_DIR$/assets/js/pages/be_ui_icons.js" />
         <option value="$PROJECT_DIR$/doa.php" />
-        <option value="$PROJECT_DIR$/utama-doa.php" />
         <option value="$PROJECT_DIR$/q-include/footer.php" />
         <option value="$PROJECT_DIR$/trackerDB.php" />
         <option value="$PROJECT_DIR$/tracker.php" />
@@ -124,6 +104,9 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/surah.php" />
         <option value="$PROJECT_DIR$/admin/admin/kemaskini-surah.php" />
+        <option value="$PROJECT_DIR$/assets/js/pages/be_ui_icons.js" />
+        <option value="$PROJECT_DIR$/utama-doa.php" />
+        <option value="$PROJECT_DIR$/assets/js/plugins/datatables/jquery.dataTables.min.js" />
       </list>
     </option>
   </component>
@@ -134,7 +117,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -178,11 +161,6 @@
               <item name="q" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="q" type="b2602c69:ProjectViewProjectNode" />
-              <item name="q" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="track" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -195,12 +173,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\q" />
+      <recent name="C:\laragon\www\q\admin\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\q\q-include" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\q\admin\admin" />
-      <recent name="C:\laragon\www\q" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -235,18 +213,18 @@
       <workItem from="1525509588802" duration="1978000" />
       <workItem from="1525591218008" duration="4682000" />
       <workItem from="1525658354488" duration="289000" />
-      <workItem from="1526198894562" duration="1499000" />
+      <workItem from="1526198894562" duration="4404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31069000" />
+    <option name="totallyTimeSpent" value="33974000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20272315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19969743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -277,34 +255,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/admin/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utama-quran.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="93" lean-forward="false" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surah.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="111" lean-forward="false" selection-start-line="63" selection-start-column="111" selection-end-line="63" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="102" lean-forward="false" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utama-quran.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -424,13 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/pages/be_ui_icons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/q-include/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -470,13 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="83" column="56" lean-forward="false" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utama-doa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -592,36 +528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q-include/meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="76" lean-forward="false" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/mousetrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="10" column="264" lean-forward="false" selection-start-line="10" selection-start-column="264" selection-end-line="10" selection-end-column="264" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/core/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="1" column="2490" lean-forward="false" selection-start-line="1" selection-start-column="2484" selection-end-line="1" selection-end-column="2490" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        <state relative-caret-position="952">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -643,11 +553,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin/kemaskini-surah.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="78" column="69" lean-forward="false" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
+        <state relative-caret-position="0">
+          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
             <marker date="1526200050164" expanded="true" signature="333:445" ph="SELECT * FRO... texts" />
             <marker date="1526200050164" expanded="true" signature="6371:6458" ph="UPDATE texts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/core/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2490" lean-forward="false" selection-start-line="1" selection-start-column="2484" selection-end-line="1" selection-end-column="2490" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/mousetrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="10" column="264" lean-forward="false" selection-start-line="10" selection-start-column="264" selection-end-line="10" selection-end-column="264" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/q-include/meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="76" lean-forward="false" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/be_ui_icons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/pages/be_tables_datatables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utama-doa.php.ori">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datatables/dataTables.bootstrap4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="6" column="198" lean-forward="false" selection-start-line="6" selection-start-column="197" selection-end-line="6" selection-end-column="198" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utama-doa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="56" column="62" lean-forward="false" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <marker date="1526202806030" expanded="true" signature="1261:1278" ph="SELECT * FRO... doa" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/datatables/jquery.dataTables.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="143" column="244" lean-forward="true" selection-start-line="143" selection-start-column="225" selection-end-line="143" selection-end-column="244" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
