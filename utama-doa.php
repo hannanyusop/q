@@ -4,59 +4,65 @@
     <?php include('q-include/nav-header.php') ?>
 
     <main id="main-container">
-        <!-- Page Content -->
         <div class="content">
             <nav class="breadcrumb bg-white push">
                 <a class="breadcrumb-item" href="index.php">Utama</a>
-                <span class="breadcrumb-item active">Senarai Doa</span>
+                <span class="breadcrumb-item active">Hisnul Muslim</span>
             </nav>
-            <!-- Dynamic Table Full Pagination -->
+            <form class="push" action="utama-doa.php" method="get">
+                <div class="input-group input-group-lg">
+                    <input type="text"
+                           name="title"
+                           class="js-icon-search form-control"
+                           placeholder="Tajuk..."
+                           value="<?php if(isset($_GET['title'])){ echo $_GET['title']; } ?>">
+                    <div class="input-group-append">
+                        <button class="input-group-text" type="submit">
+                                <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
             <div class="block">
-
-                <div class="block-content block-content-full">
-                    <table class="table table-hover table-vcenter js-dataTable-full-pagination">
-                        <thead>
+                <div class="block-content">
+                    <!-- Intro Category -->
+                    <table class="table table-striped table-borderless table-vcenter">
+                        <thead class="thead-light">
                         <tr>
-                            <th class="text-center"></th>
-                            <th>Title</th>
-                            <th class="d-none d-sm-table-cell">Audio</th>
-                            <th class="d-none d-sm-table-cell text-center" style="width: 15%;">Hits </th>
-                            <th class="text-center" style="width: 15%;"></th>
+                            <th colspan="2"></th>
+                            <th class="d-md-table-cell text-center" style="width: 30%;">Jumlah Pengunjung</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $q_doa = mysqli_query($db, "SELECT * FROM doa");
-                        while($doa = mysqli_fetch_assoc($q_doa)) {
+                        <?php
+                        //get all surah
+                        $r_surah = mysqli_query($db, "SELECT * FROM doa as a");
+                        if(isset($_GET['title'])){
+                            $title = $_GET['title'];
+                            $r_surah = mysqli_query($db, "SELECT * FROM doa WHERE title LIKE '%$title%'");
+                        }
+                        while($doa = mysqli_fetch_assoc($r_surah)) {
                         ?>
-                        <tr>
-                            <td class="text-center"><?php echo $doa['id'] ?></td>
-                            <td class="font-w600"><a href="doa.php?did=<?php echo $doa['id']; ?>"><?php echo $doa['title'] ?></a></td>
-                            <td class="d-none d-sm-table-cell">
-                                <span class="badge badge-warning">
-                                    <?php if(is_null($doa['track'])  || $doa['track'] == ''){ echo 'ada'; }else{ echo 'tiada'; } ?>
-                                <span class="badge badge-warning">
+                            <tr>
+                            <td class="text-center" style="width: 65px;">
+                                <i class="si si-check fa-2x"></i>
                             </td>
-                            <td class="d-none d-sm-table-cell text-center">
-                                <?php echo $doa['hits'] ?>
+                            <td>
+                                <a href="doa.php?did=<?php echo $doa['id']; ?>">Doa <?php echo $doa['title'] ?></a>
                             </td>
-                            <td class="text-center">
-
+                            <td class="d-none d-md-table-cell text-center">
+                                <a class="font-w600" href="javascript:void(0)"> <?php echo $doa['hits']; ?></a>
                             </td>
                         </tr>
-                        <?php } unset($doa); ?>
+                        <?php } ?>
                         </tbody>
                     </table>
+                    <!-- END Intro Category -->
                 </div>
             </div>
-            <!-- END Dynamic Table Full Pagination -->
+            <!-- END Categories Block -->
         </div>
+        <!-- END Page Content -->
 
     </main>
     <?php include('q-include/footer.php') ?>
-    <script src="assets/js/pages/be_ui_icons.js"></script>
-    <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page JS Code -->
-    <script src="assets/js/pages/be_tables_datatables.js"></script>
-    </body>
