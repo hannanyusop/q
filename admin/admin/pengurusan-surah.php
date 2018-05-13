@@ -55,11 +55,11 @@
     <!-- MAIN CONTENT -->
     <div id="main-content">
         <div class="container-fluid">
-            <h1 class="sr-only"><?= $title ?></h1>
+            <h1 class="sr-only"><?php echo $title ?></h1>
 
             <div class="dashboard-section">
                 <div class="section-heading clearfix">
-                    <h2 class="section-title"><i class="fa fa-pie-chart"></i><?= $title ?></h2>
+                    <h2 class="section-title"><i class="fa fa-pie-chart"></i><?php echo $title ?></h2>
                 </div>
             </div>
 
