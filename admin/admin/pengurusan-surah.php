@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <?php include_once ('include/logged-header.php'); ?>
 <?php $title = "Senarai Surah"; ?>
-<?php $tempat_turun = [
+<?php $list = [
         'Semua' => 'MEKKAH/MADINAH',
         'Mekkah' => 'MEKKAH',
         'Madinah' => 'MADINAH'
@@ -13,15 +13,16 @@
         echo "<script>window.location='pengurusan-surah.php?page=1';</script>";
     }
 
-    if(isset($_POST['cari'])){
+    if(isset($_GET['cari'])){
+//        print('filter');die();
 
 
-        if($_POST['tempat_turun'] == "Semua"){
+        if($_GET['tempat_turun'] == "Semua"){
             $tempat_turun = "";
         }else{
-            $tempat_turun = 'AND tempat_turun = "'.$_POST['tempat_turun'].'"';
+            $tempat_turun = 'AND tempat_turun = "'.$_GET['tempat_turun'].'"';
         }
-        $query = "SELECT * FROM surah WHERE malay_title like '%$_POST[surah]%' $tempat_turun. ";
+        $query = "SELECT * FROM surah WHERE malay_title like '%$_GET[surah]%' $tempat_turun ";
     }else{
         $query = "SELECT * FROM surah";
     }
@@ -36,6 +37,7 @@
     //pagination
     $offset = ($current_page-1)*10;
     $sql = $query." LIMIT 10 OFFSET ".$offset;
+//    print ($sql);die();
     $get_surah = mysqli_query($db, $sql);
 
 ?>
@@ -67,20 +69,29 @@
                     <div class="col-md-3">
                         <div class="panel-content">
                             <h2 class="heading"><i class="fa fa-search"></i> Carian</h2>
-                            <form method="post" action="pengurusan-surah.php?page=1">
+                            <form method="get" action="pengurusan-surah.php?page=1">
                                 <div class="form-group">
+                                    <input type="hidden" value="<?php echo $_GET['page']; ?>" name="page">
                                     <label>Nama Surah</label>
-                                    <input type="text"  name="surah" value="<?php if(isset($_POST['surah'])) { echo $_POST['surah']; } ?>" class="form-control">
+                                    <input type="text"  name="surah" value="<?php if(isset($_GET['surah'])) { echo $_GET['surah']; } ?>" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Tempat Turun</label>
                                     <select class="form-control" name="tempat_turun">
-                                        <?php foreach ($tempat_turun as $value => $lokasi): ?>
-                                        <option value="<?= $value?>" <?php if(isset($_POST['tempat_turun'])){ if($value == $_POST['tempat_turun']) { echo "selected"; }} ?>><?= $lokasi ?></option>
+                                        <?php foreach ($list as $value => $lokasi): ?>
+                                        <option value="<?php echo $value?>"
+                                            <?php if(isset($_GET['tempat_turun'])){
+                                                if($value == $_GET['tempat_turun']) {
+                                                    echo "selected";
+                                                }
+                                            } ?>>
+                                            <?php echo $lokasi ?>
+                                        </option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
-                                <button type="submit" name="cari" class="btn btn-primary">Cari</button>
+                                <button type="submit" name="cari"  value="true" class="btn btn-primary">Cari</button>
+                                <a href="pengurusan-surah.php?page=1" class="text-danger">Reset</a>
                             </form>
                         </div>
                     </div>
