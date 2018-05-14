@@ -108,10 +108,12 @@
                         <div class="block-content">
                             <nav class="clearfix push">
                                 <?php
-                                $offset = $total_ayat_page*$ms;
-                                if($last_page == 1){
+								
+                                $offset = ($total_ayat_page*$ms)-$total_ayat_page;
+                                if($last_page == 1 || $_GET['ms'] == 1){
                                     $offset = 0;
                                 }
+								
                                 $get_text = mysqli_query($db,"SELECT * FROM texts as a WHERE a.surah_id = $surah_id LIMIT $total_ayat_page OFFSET $offset");
 
                                 while ($text = mysqli_fetch_assoc($get_text)) { ?>
