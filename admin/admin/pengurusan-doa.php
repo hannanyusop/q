@@ -4,6 +4,16 @@
 <?php include_once ('include/logged-header.php'); ?>
 <?php $title = "Senarai Doa"; ?>
 <?php
+
+    if(isset($_GET['delete_id'])) {
+//        print ($_GET['delete_id']);die();
+        $sql = "DELETE FROM doa WHERE id = $_GET[delete_id]";
+        if (mysqli_query($db, $sql)) {
+            unlink("../../doa-track/".$_GET['delete_id'].".mp3");
+            echo "<script>alert('Doa telah di padam.');window.location='pengurusan-doa.php?page=1';</script>";
+        }
+        echo "<script>alert('Operasi gagal!.');window.location='pengurusan-doa.php?page=1';</script>";
+    }
     $statuses = [
         1 => '<span class="badge badge-active">Aktif</span>',
         2 => '<span class="badge badge-active">Tidak Aktif</span>'
@@ -91,10 +101,14 @@
                                     {
                                     ?>
                                     <tr>
-                                        <td><?= $row['id'] ?></td>
+                                        <td><?php echo $row['id'] ?></td>
                                         <td><?php echo $row['title']; ?></td>
                                         <td><?php echo $statuses[$row['status']] ?></td>
-                                        <td><a href="kemaskini-doa.php?did=<?= $row['id']; ?>">Kemaskini</a></td>
+                                        <td>
+                                            <a  class="btn btn-info" href="kemaskini-doa.php?did=<?php echo $row['id']; ?>">Kemaskini</a>
+                                            <a  class="btn btn-danger" href="pengurusan-doa.php?delete_id=<?php echo $row['id']; ?>" onclick="return confirm('Adakah anda pasti ingin memadam doa ini?');">Delete</a>
+
+                                        </td>
                                     </tr>
                                     <?php } ?>
                                     </tbody>
