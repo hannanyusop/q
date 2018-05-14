@@ -9,7 +9,10 @@
 //        print ($_GET['delete_id']);die();
         $sql = "DELETE FROM doa WHERE id = $_GET[delete_id]";
         if (mysqli_query($db, $sql)) {
-            unlink("../../doa-track/".$_GET['delete_id'].".mp3");
+            //using function file_exists() instead of run query to check track 
+			if(file_exists("../../doa-track/".$_GET['delete_id'].".mp3")){
+				unlink("../../doa-track/".$_GET['delete_id'].".mp3");
+			}
             echo "<script>alert('Doa telah di padam.');window.location='pengurusan-doa.php?page=1';</script>";
         }
         echo "<script>alert('Operasi gagal!.');window.location='pengurusan-doa.php?page=1';</script>";
